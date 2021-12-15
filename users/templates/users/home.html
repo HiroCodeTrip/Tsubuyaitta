@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserHome</title>
+</head>
+
+<body>
+    <div>{# <a href="{% url "" %}"></a> #}
+        <P>this is user home page.</P>
+        <p>the urls are already shown before the page url was clicked.</p>
+        <a href="{% url "tutorial" %}">tutorial</a><br>
+        <a href="{% url "profilesetting" %}">profilesetting</a><br>
+        <a href="{% url "accountsetting" %}">accountsetting</a><br>
+        <a href="{% url "maketheroom" %}">maketheroom</a><br>
+        <a href="{% url "jointheroom" %}">jointheroom</a><br>
+        <a href="{% url "directmessage" %}">directmessage</a><br>
+    </div>
+</body>
+
+</html>
