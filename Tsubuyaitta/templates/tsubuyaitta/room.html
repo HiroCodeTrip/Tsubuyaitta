@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Room</title>
+    <meta charset="UTF-8"></head>
+  <body>
+    <h1>Room Page</h1>
+    {% if posts %}
+    {% for post in posts %}
+    <h4>{{ post.owner }}</h4>
+    <small>[{{ post.is_solved }}]</small>
+    <div>
+        {{ post.text |linebreaksbr }}
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No post.</p>
+    {% endif %}
+    <hr>
+    <p>
+      <a href="{% url 'index' %}">Top</a>
+    </p>
+  </body>
+</html>

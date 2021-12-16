@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>main test</title>
+  </head>
+  <body>
+    <h1>Main sample</h1>
+    <p>This is a sample page of main app.</p>
+    <br>
+    {% if rooms %}
+    {% for rooom in rooms %}
+    <h4>{{ r_author }}</h4>
+    <h3>{{ r_name }}</h3>
+    {% endfor %}
+    {% else %}
+    <p>No room.</p>
+    {% endif %}
+  </body>
+</html>
