@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Tsubuyaitta',
+    'Tsubuyaitter',
     'managers',
     'django.contrib.admin',
     'django.contrib.auth',
