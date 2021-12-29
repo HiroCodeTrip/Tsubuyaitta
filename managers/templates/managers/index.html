@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>managers test</title>
+  </head>
+  <body>
+    <h1>Managers sample</h1>
+    <p>This is a sample page of managers app.</p>
+
+    <p>You can make a room from the following form.</p>
+    <form action="{% url 'm_index' %}" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="titleInput">Room Name</label><br>
+        <input id="titleInput" name="r_name" type="text" placeholder="Input Room name">
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <br>
+    
+    {% if rooms %}
+    {% for room in rooms %}
+    <div>
+      <h2><a href="{% url 'room' room.id %}">{{ room.r_name }}</a></h2>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No room.</p>
+    {% endif %}
+    <hr>
+
+  </body>
+</html>

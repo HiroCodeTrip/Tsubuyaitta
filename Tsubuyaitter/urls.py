@@ -3,5 +3,6 @@ from . import views
 
 #''/'' now
 urlpatterns = [
-    path('',views.appexplanation,name='appex'),
-] #path('',views.,name=''),
+    path('', views.index, name='t_index'),
+    path('<int:room_id>/', views.room, name='room')
+]
