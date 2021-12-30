@@ -8,7 +8,7 @@
     <h1>Main sample</h1>
     <p>This is a sample page of main function.</p>
     <br>
-    {% if room %}
+    {% if rooms %}
     {% for room in rooms %}
 
     <h2><a href="{% url 'room' room.id %}">{{ room.r_name }}</a></h2>
