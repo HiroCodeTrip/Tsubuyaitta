@@ -3,7 +3,7 @@
 ツブヤイッターデザイン
 →https://docs.google.com/presentation/d/1btfVAdxg3y8sa8EGmZcbherOz19-Lx1iS3p3rwJa4gU/edit#slide=id.p
 
-![image](https://user-images.githubusercontent.com/85667408/146656083-a746ddfb-180a-41b2-a423-57b8d7c28793.png)
+![image](https://github.com/s1f10210356/Tsubuyaitta/blob/mainbranch/Tree.png?raw=true)
 
 
 以下にあるのはREADME.mdのテンプレートです。
