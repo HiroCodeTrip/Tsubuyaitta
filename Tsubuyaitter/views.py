@@ -37,3 +37,6 @@ def room(request, room_id):
         'room_id': room_id,
     }
     return render(request, 'tsubuyaitter/room.html',context)
+
+def home(request):
+    return render(request, 'tsubuyaitter/home.html')
