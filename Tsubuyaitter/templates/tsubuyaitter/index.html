@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>main test</title>
-  </head>
-  <body>
-    <h1>Main sample</h1>
-    <p>This is a sample page of main function.</p>
-    <br>
-    {% if rooms %}
-    {% for room in rooms %}
+<html lang="ja">
 
-    <h2><a href="{% url 'room' room.id %}">{{ room.r_name }}</a></h2>
-    <h3>{{ room.r_author }}</h3>
-    {% endfor %}
-    {% else %}
-    <p>No room.</p>
-    {% endif %}
-  </body>
+<head>
+  
+  <meta charset="UTF-8">
+  <title>main test</title>
+</head>
+
+<body>
+  <h1>Main sample</h1>
+  <p>This is a sample page of main function.</p>
+  <br>
+  {% if rooms %}
+  {% for room in rooms %}
+
+  <h2><a href="{% url 'room' room.id %}">{{ room.r_name }}</a></h2>
+  <h3>{{ room.r_author }}</h3>
+  {% endfor %}
+  {% else %}
+  <p>No room.</p>
+  {% endif %}
+</body>
+
 </html>
