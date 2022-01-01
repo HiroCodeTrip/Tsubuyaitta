@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -23,5 +23,8 @@
         <a class="Link" href="{% url '' %}">{{ r_n.r_name }}</a>
     </div>
     <h2>DM</h2>
+    <div>
+      <a href = "{% url 'appex' %}"><button class="btn btn-primary">Log out!</button></a>
+  </div>
   </body>
 </html>
