@@ -57,7 +57,7 @@ def room(request, room_id):
 
 def home(request):
     contents = {
-        'usernames':User.objects.order_by('-id'),
+        # 'usernames':User.objects.order_by('-id'),
         'rooms':Room.objects.order_by('-created_at')
     }
     return render(request, 'tsubuyaitter/home.html', contents)
