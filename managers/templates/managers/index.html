@@ -20,17 +20,5 @@
       </div>
     </form>
     <br>
-    
-    {% if rooms %}
-    {% for room in rooms %}
-    <div>
-      <h2><a href="{% url 'room' room.id %}">{{ room.r_name }}</a></h2>
-    </div>
-    {% endfor %}
-    {% else %}
-    <p>No room.</p>
-    {% endif %}
-    <hr>
-
   </body>
 </html>
