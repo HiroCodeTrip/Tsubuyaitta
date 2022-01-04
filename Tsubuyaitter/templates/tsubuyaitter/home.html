@@ -5,9 +5,27 @@
     <title>Home</title>
   </head>
   <body>
+    {% if usernames %}
+    {% for content in usernames %}
+    <div>
+        <a class="Link" href="{% url '' %}">{{ content.username }}</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>Guest</p>
+    {% endif %}
     <h2>new</h2>
     <h2>make the room as owner</h2>
     <h2>join as member</h2>
+    {% if rooms %}
+    {% for r_n in rooms %}
+    <div>
+        <a class="Link" href="{% url '' %}">{{ r_n.r_name }}</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No Room.</p>
+    {% endif %}
     <h2>DM</h2>
     <div>
       <a href = "{% url 'appex' %}"><button class="btn btn-primary">Log out!</button></a>
