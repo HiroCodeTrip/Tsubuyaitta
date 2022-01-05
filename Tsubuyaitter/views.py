@@ -11,6 +11,9 @@ from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.template import loader
+#login require
+from django.contrib.auth.decorators import login_required
+
 
 def signup(request):
     if request.method == 'POST':
@@ -27,13 +30,14 @@ def signup(request):
     return render(request, 'tsubuyaitter/signup.html', {'form': form})
 
 # Create your views here.
-
+@login_required
 def index(request):
     context = {
         "rooms": Room.objects.all()
     }
     return render(request, 'tsubuyaitter/index.html', context)
 
+@login_required
 def room(request, room_id):
     if request.method == 'POST':
         room = Room.objects.get(pk=room_id)
@@ -57,6 +61,8 @@ def room(request, room_id):
     }
     return render(request, 'tsubuyaitter/room.html',context)
 
+
+@login_required
 def home(request):
     contents = {
         # 'usernames':User.objects.order_by('-id'),
