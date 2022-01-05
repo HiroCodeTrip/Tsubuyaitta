@@ -10,6 +10,7 @@ from django.shortcuts import redirect
 # sign up
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
+from django.template import loader
 
 def signup(request):
     if request.method == 'POST':
@@ -58,6 +59,6 @@ def room(request, room_id):
 def home(request):
     contents = {
         'usernames':User.objects.order_by('-id'),
-        'rooms':Room.objects.order_by('-created_at')
+        'room_list':Room.objects.order_by('-created_at')[:5]
     }
     return render(request, 'tsubuyaitter/home.html', contents)
