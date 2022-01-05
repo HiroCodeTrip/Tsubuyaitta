@@ -17,7 +17,7 @@
     <h2><a href="{% url 'm_index' %}">make the room as owner</a></h2>
     {% endif %}
     <h2>join as member</h2>
-    {% if rooms %}
+    {% if room_list %}
     {% for r_n in room_list %}
     <div>
         <a class="Link" href="{% url 'room' r_n.id %}">{{ r_n.r_name }}</a>
