@@ -7,7 +7,6 @@
   <body>
     {% if user.id %}
     <div>
-        <a class="Link" href="{% url '' %}">{{ user.username }}</a>
     </div>
     {% else %}
     <p>Guest</p>
@@ -17,10 +16,10 @@
     <h2><a href="{% url 'm_index' %}">make the room as owner</a></h2>
     {% endif %}
     <h2>join as member</h2>
-    {% if room_list %}
-    {% for r_n in room_list %}
+    {% if rooms %}
+    {% for room in rooms %}
     <div>
-        <a class="Link" href="{% url 'room' r_n.id %}">{{ r_n.r_name }}</a>
+        <a class="Link" href="{% url 'room' room.id %}">{{ room.r_name }}</a>
     </div>
     {% endfor %}
     {% else %}
@@ -28,7 +27,7 @@
     {% endif %}
     <h2>DM</h2>
     <div>
-      <a href = "/tsubuyaitter/{{ room. }}"><button class="btn btn-primary">Log out!</button></a>
+      <a href = "{% url 'appex' %}"><button class="btn btn-primary">Log out!</button></a>
   </div>
   </body>
 </html>
