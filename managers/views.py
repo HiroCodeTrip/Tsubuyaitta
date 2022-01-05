@@ -10,9 +10,6 @@ def index(request):
     if request.method == 'POST':
         room = Room(r_name=request.POST['r_name'], r_auther=request.user)
         room.save()
-        return redirect('m_index')
-    
-    context = {
-        "rooms": Room.objects.all()
-    }
-    return render(request, 'managers/index.html', context)
+        return redirect('home')
+
+    return render(request, 'managers/index.html')

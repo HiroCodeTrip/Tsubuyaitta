@@ -12,14 +12,20 @@
     {% else %}
     <p>Guest</p>
     {% endif %}
-    <h2>make the room as owner</h2>
+    <h2>new</h2>
+    {% if user.is_staff %}
+    <h2><a href="{% url 'm_index' %}">make the room as owner</a></h2>
+    {% endif %}
     <h2>join as member</h2>
     {% if rooms %}
     {% for r_n in room_list %}
     <div>
-        <a href="/tsubuyaitter/{{ r_n.name }}">{{ r_n.r_name }}</a>
+        <a class="Link" href="{% url 'room' r_n.id %}">{{ r_n.r_name }}</a>
     </div>
     {% endfor %}
+    {% else %}
+    <p>No Room.</p>
+    {% endif %}
     <h2>DM</h2>
     <div>
       <a href = "/tsubuyaitter/{{ room. }}"><button class="btn btn-primary">Log out!</button></a>

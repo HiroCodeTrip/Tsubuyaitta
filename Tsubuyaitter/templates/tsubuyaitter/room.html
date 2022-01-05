@@ -4,8 +4,8 @@
     <title>Room</title>
     <meta charset="UTF-8"></head>
   <body>
-    <h1>Room Page</h1>
-    <p>You can post a tweet from the following form.</p>
+    <h1>{{ that_room.r_name }}</h1>
+    <p>下のフォームから投稿できます</p>
     <form action="{% url 'room' room_id %}" method="post">
       {% csrf_token %}
       <div>
@@ -19,10 +19,10 @@
     <br> 
     {% if posts %}
     {% for post in posts %}
-    <h4>{{ post.owner }}</h4>
-    <small>[{{ post.is_solved }}]</small>
     <div>
-        {{ post.text |linebreaksbr }}
+      <h4>{{ post.owner }}</h4>
+      <small>[{{ post.is_solved }}]</small>
+      {{ post.text |linebreaksbr }}
     </div>
     {% endfor %}
     {% else %}
@@ -30,7 +30,7 @@
     {% endif %}
     <hr>
     <p>
-      <a href="{% url 't_index' %}">Top</a>
+      <a href="{% url 'home' %}">Top</a>
     </p>
   </body>
 </html>

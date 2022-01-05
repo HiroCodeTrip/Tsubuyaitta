@@ -53,12 +53,13 @@ def room(request, room_id):
     context = {
         'posts': posts,
         'room_id': room_id,
+        'that_room': Room.objects.get(pk=room_id),
     }
     return render(request, 'tsubuyaitter/room.html',context)
 
 def home(request):
     contents = {
-        'usernames':User.objects.order_by('-id'),
-        'room_list':Room.objects.order_by('-created_at')[:5]
+        # 'usernames':User.objects.order_by('-id'),
+        'rooms':Room.objects.order_by('-created_at')
     }
     return render(request, 'tsubuyaitter/home.html', contents)
