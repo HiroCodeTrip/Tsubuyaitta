@@ -52,6 +52,7 @@ def room(request, room_id):
     context = {
         'posts': posts,
         'room_id': room_id,
+        'that_room': Room.objects.get(pk=room_id),
     }
     return render(request, 'tsubuyaitter/room.html',context)
 
