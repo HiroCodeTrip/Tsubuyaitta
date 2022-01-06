@@ -1,7 +1,8 @@
 .prof {
     background-color: rgb(230, 87, 21);
-    text-align: right;
+    text-align: center;
     height: 60px;
+    font-size: 300%;
 }
 /*h1 {
     font-size: 170%;
