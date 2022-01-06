@@ -25,7 +25,8 @@
     {% for post in posts %}
     <div class="tweet">
       <h4>{{ post.owner }}</h4>
-      <h6><a href="{% url 'resolved' post.id %}">解決した</a></h6>
+      <h5><a href="{% url 'resolved' post.id %}">解決した</a></h5>
+      <h6><a href="{% url 'deletepost' post.id %}">投稿を削除</a></h6>
       {% if post.is_solved %}
       <small>[解決済]</small>
       {% else %}
