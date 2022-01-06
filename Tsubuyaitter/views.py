@@ -69,3 +69,12 @@ def home(request):
         'rooms':Room.objects.order_by('-created_at')
     }
     return render(request, 'tsubuyaitter/home.html', contents)
+
+@login_required
+def resolved(request, post_id):
+    that_post = Post.objects.get(pk=post_id)
+    that_post.is_solved = True
+    that_post.save()
+
+    r_id = that_post.posted_room.id
+    return redirect('room', room_id=r_id)

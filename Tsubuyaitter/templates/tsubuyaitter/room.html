@@ -25,7 +25,12 @@
     {% for post in posts %}
     <div class="tweet">
       <h4>{{ post.owner }}</h4>
-      <small>[{{ post.is_solved }}]</small>
+      <h6><a href="{% url 'resolved' post.id %}">解決した</a></h6>
+      {% if post.is_solved %}
+      <small>[解決済]</small>
+      {% else %}
+      <small>[未解決]</small>
+      {% endif %}
       {{ post.text |linebreaksbr }}
     </div>
     {% endfor %}

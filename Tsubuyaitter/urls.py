@@ -11,4 +11,5 @@ urlpatterns = [
     path('home',views.home, name='home'),
     #path('', views.index, name='t_index'),
     path('<int:room_id>/', views.room, name='room'),
+    path('resolved/<int:post_id>', views.resolved, name='resolved')
 ]
