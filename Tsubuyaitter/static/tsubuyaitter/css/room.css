@@ -7,10 +7,18 @@
     position: relative;
 }
 
+.tweet h5{
+    background-color: #ddeeff;
+    border: 1px solid #666666;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
 .tweet h6{
     background-color: #ddeeff;
     border: 1px solid #666666;
     position: absolute;
     right: 10px;
-    top: 0;
+    top: 50px;
 }

@@ -78,3 +78,11 @@ def resolved(request, post_id):
 
     r_id = that_post.posted_room.id
     return redirect('room', room_id=r_id)
+
+@login_required
+def delete_post(request, post_id):
+    that_post = Post.objects.get(pk=post_id)
+    r_id = that_post.posted_room.id
+    that_post.delete()
+
+    return redirect('room', room_id=r_id)
