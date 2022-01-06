@@ -2,21 +2,21 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>managers test</title>
+    <title>ルーム管理</title>
   </head>
   <body>
-    <h1>Managers sample</h1>
-    <p>This is a sample page of managers app.</p>
+    <h1>ルーム管理</h1>
+    <p>ルームの管理ができます。新しいルームを作成しましょう!</p>
 
-    <p>You can make a room from the following form.</p>
+    <p>以下のフォームより新しいルームに名前を付けて作成できます。</p>
     <form action="{% url 'm_index' %}" method="post">
       {% csrf_token %}
       <div>
-        <label for="titleInput">Room Name</label><br>
+        <label for="titleInput">ルーム名</label><br>
         <input id="titleInput" name="r_name" type="text" placeholder="Input Room name">
       </div>
       <div>
-        <button type="submit">Submit</button>
+        <button type="submit">ルーム作成!</button>
       </div>
     </form>
     <br>
