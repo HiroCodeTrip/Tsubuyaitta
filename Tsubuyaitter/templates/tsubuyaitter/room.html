@@ -1,8 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <title>Room</title>
-    <meta charset="UTF-8"></head>
+    <meta charset="UTF-8">
+    <link href="{% static 'tsubuyaitter/css/room.css' %}" rel="stylesheet">
+  </head>
   <body>
     <h1>{{ that_room.r_name }}</h1>
     <p>下のフォームから投稿できます</p>
@@ -17,9 +20,10 @@
       </div>
     </form>
     <br> 
+    <hr>
     {% if posts %}
     {% for post in posts %}
-    <div>
+    <div class="tweet">
       <h4>{{ post.owner }}</h4>
       <small>[{{ post.is_solved }}]</small>
       {{ post.text |linebreaksbr }}
