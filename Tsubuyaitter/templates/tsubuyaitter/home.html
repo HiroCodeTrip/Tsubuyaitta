@@ -1,33 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="{% static 'tsubuyaitter/css/home.css' %}">
   </head>
   <body>
-    {% if user.id %}
-    <div>
+    <p class="prof"></p>
+    <div class="aaa">
+      <div id="bbb">
+        <span>Menu</span>
+      </div>
+      <div id="ccc">
+        {% if user.is_staff %}
+        <span>
+          <div class="Divlink">
+            make the room as owner
+            <a class="Link" href="{% url 'm_index' %}"></a>
+          </div>
+        </span>
+        {% endif %}
+        <span><h2 class="hhh">join as member</h2></span>
+        {% if rooms %}
+        {% for room in rooms %}
+        <div class="room">
+            <span>
+              <div class="Divlink">
+                {{ room.r_name }}
+                <a class="Link" href="{{% url 'room' room.id %}}"></a>
+              </div>
+            </span>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No Room.</p>
+        {% endif %}
+      </div>
     </div>
-    {% else %}
-    <p>Guest</p>
-    {% endif %}
-    <h2>new</h2>
-    {% if user.is_staff %}
-    <h2><a href="{% url 'm_index' %}">make the room as owner</a></h2>
-    {% endif %}
-    <h2>join as member</h2>
-    {% if rooms %}
-    {% for room in rooms %}
-    <div>
-        <a class="Link" href="{% url 'room' room.id %}">{{ room.r_name }}</a>
-    </div>
-    {% endfor %}
-    {% else %}
-    <p>No Room.</p>
-    {% endif %}
-    <h2>DM</h2>
     <div>
       <a href = "{% url 'appex' %}"><button class="btn btn-primary">Log out!</button></a>
-  </div>
+    </div>
   </body>
 </html>
