@@ -27,7 +27,8 @@
         <div class="room">
             <span>
               <div class="Divlink">
-                <a class="Link" href="{% url 'room' room.id %}">{{ room.r_name }}</a>
+                {{ room.r_name }}
+                <a class="Link" href="{% url 'room' room.id %}"></a>
               </div>
             </span>
         </div>
