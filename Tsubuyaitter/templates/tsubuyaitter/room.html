@@ -7,6 +7,10 @@
     <link href="{% static 'tsubuyaitter/css/room.css' %}" rel="stylesheet">
   </head>
   <body>
+    <div id="header">
+      <img src="{% static 'tsubuyaitter/img/test1.png' %}" alt="logo">
+      <p>Tsubuyaitter</p>
+    </div>
     <h1>{{ that_room.r_name }}</h1>
     <p>下のフォームから投稿できます</p>
     <form action="{% url 'room' room_id %}" method="post">
