@@ -1,7 +1,7 @@
 # Tsubuyaitta
 ### ツブヤイッター
 ツブヤイッターデザイン
-→https://docs.google.com/presentation/d/1btfVAdxg3y8sa8EGmZcbherOz19-Lx1iS3p3rwJa4gU/edit#slide=id.p
+→https://docs.google.com/presentation/d/1btfVAdxg3y8sa8EGmZcbherOz19-Lx1iS3p3rwJa4gU/edit?usp=sharing
 
 ![image](https://github.com/s1f10210356/Tsubuyaitta/blob/mainbranch/Tree.png?raw=true)
 
