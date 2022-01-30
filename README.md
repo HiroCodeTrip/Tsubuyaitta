@@ -19,3 +19,6 @@ INCEPTION_DECK.mdファイルはチーム間の共通認識を分かりやすく
 大体どうやって使うのかを把握しておいてくださいね。
 
 by Hyoshida.
+
+
+![image](https://user-images.githubusercontent.com/67158360/151707143-9b19ccd5-9a2e-43c1-8ce4-b92668dd306a.png)
